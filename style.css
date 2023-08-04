@@ -53,13 +53,13 @@ body {
 .header {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .header > * {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     border: 2px solid black;
     border-radius: 2rem;
     padding: 20px;
@@ -69,10 +69,12 @@ body {
 .header-logo {
     font-size: 6rem;
     flex: 2;
+    align-items: center;
 }
 
 .intro {
     flex: 1;
+    min-width: 360px;
 }
 
 .intro-text > h2 {
