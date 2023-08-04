@@ -62,12 +62,12 @@ body {
     align-items: center;
     border: 2px solid black;
     border-radius: 2rem;
+    padding: 20px;
     background-color: #c9c9ff;
 }
 
 .header-logo {
     font-size: 6rem;
-    kerning: 20px;
     flex: 2;
 }
 
