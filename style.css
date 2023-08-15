@@ -1,19 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Space+Grotesk:wght@400;700&display=swap');
 
-/*
-Fonts:
-    font-family: 'Inter', sans-serif;
-    font-family: 'Space Grotesk', sans-serif;
-*/
-
-/*
-Colors used:
-    white: #f2e7f5;
-    light-purple: #9169c1;
-    dark-purple: #462d86;
-    green: #82ac33;
-*/
-
 * {
     margin: 0;
     padding: 0;
@@ -43,7 +29,9 @@ p, a { font-size: 1.125em;}
 
 
 :root {
-    --text: hsl(40, 10%, 94%);
+    --text-hsl-vals: 40, 10%, 94%;
+
+    --text: hsl(var(--text-hsl-vals));
     --background: hsl(0, 0%, 0%);
     --primary: hsl(0, 0%, 22%);
     --secondary: hsl(0, 0%, 13%);
@@ -83,13 +71,21 @@ nav {
     text-decoration: none;
     font-family: var(--standout-font);
     padding: 0.5rem 1rem;
+    color: var(--text);
 }
 
 .nav-link.logo {
     font-size: 1.4rem;
     transition: text-shadow 0.3s ease-out;
+    font-weight: 700;
+    color: var(--accent)
+}
+
+.nav-link:hover:not(.logo) {
+    text-decoration: underline;
+    text-underline-offset: 5px;
 }
 
 .nav-link.logo:hover {
-    text-shadow: 0 0 10px var(--text);
+    text-shadow: 0 0 20px hsla(var(--text-hsl-vals), 0.3);
 }
