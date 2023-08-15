@@ -15,13 +15,25 @@ Colors used:
 */
 
 * {
-    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --base-font: 'Inter', sans-serif;
+    --standout-font: 'Space Grotesk', sans-serif;
+}
+
+p, 
+a,
+div {
+    font-family: var(--base-font);
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: var(--standout-font);
 }
 
 h1 { font-size: 4em; }
@@ -47,35 +59,37 @@ a {
     color: var(--accent);
 }
 
-.container {
+.logo {
+    font-family: var(--standout-font);
+}
+
+/* Navigation bar */
+nav {
+    background: var(--primary);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    margin: 1rem;
+
+}
+
+.nav-list {
     display: flex;
-    gap: 1rem;
-    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
 }
 
-.box {
-    width: 100px;
-    height: 100px;
-    border-radius: 1rem;
-    border: 2px solid var(--text);
+.nav-link {
+    text-decoration: none;
+    font-family: var(--standout-font);
+    padding: 0.5rem 1rem;
 }
 
-.box:nth-of-type(1) {
-    background-color: var(--text);
+.nav-link.logo {
+    font-size: 1.4rem;
+    transition: text-shadow 0.3s ease-out;
 }
 
-.box:nth-of-type(2) {
-    background-color: var(--background);
-}
-
-.box:nth-of-type(3) {
-    background-color: var(--primary);
-}
-
-.box:nth-of-type(4) {
-    background-color: var(--secondary);
-}
-
-.box:nth-of-type(5) {
-    background-color: var(--accent);
+.nav-link.logo:hover {
+    text-shadow: 0 0 10px var(--text);
 }
